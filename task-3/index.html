@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite + TS</title>
+    </head>
+    <body>
+        <main class="app">
+            <div class="app__card">
+                <div class="app__header">
+                    <div class="app__input__wrapper">
+                        <svg
+                            width="24"
+                            height="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                        >
+                            <path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z" />
+                        </svg>
+                        <input class="app__input" type="text" placeholder="Add a new task" />
+                    </div>
+
+                    <div class="app__controls">
+                        <div class="app__filters">
+                            <button class="app__filter app__filter--link app__filter--link-active">All</button>
+                            <button class="app__filter app__filter--link">Pending</button>
+                            <button class="app__filter app__filter--link">Completed</button>
+                        </div>
+                        <button class="app__filter app__filter--button">Clear All</button>
+                    </div>
+                </div>
+
+                <div class="app__tasks__wrapper">
+                    <div class="app__tasks__message util--hidden">
+                        <p>You don't have any task here</p>
+                    </div>
+
+                    <ul class="app__tasks"></ul>
+                </div>
+            </div>
+        </main>
+
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>

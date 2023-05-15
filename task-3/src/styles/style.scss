@@ -1,0 +1,205 @@
+@import './preflight';
+
+@mixin gradient {
+    background: rgb(70, 167, 255);
+    background: linear-gradient(135deg, rgba(70, 167, 255, 1) 0%, rgba(50, 110, 254, 1) 100%);
+}
+
+$blue: #3C87FF;
+$light-gray: #cecece;
+$gray: #999999;
+$black: #000000;
+$white: #ffffff;
+$red: red;
+
+body {
+    overflow: hidden;
+}
+
+.util {
+    &--hidden {
+        display: none !important;
+    }
+}
+
+.app {
+    @include gradient;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 100px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__card {
+    max-width: 400px;
+    width: 100%;
+    height: 80vh;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app__header {
+    padding: 32px;
+    border-bottom: 1px solid $light-gray;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.app__input__wrapper {
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        fill: $light-gray;
+    }
+}
+
+.app__input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 12px 12px 12px 48px;
+    border: 1px solid $gray;
+
+    &::placeholder {
+        color: $light-gray;
+    }
+
+    &:focus {
+        outline: 4px solid $blue;
+        outline-offset: 4px;
+    }
+}
+
+.app__controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.app__filters {
+    display: flex;
+    gap: 16px;
+}
+
+.app__filter {
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    transition: transform 0.25s ease;
+}
+
+.app__filter--link {
+    color: $black;
+
+    &-active {
+        color: $blue;
+    }
+}
+
+.app__filter--button {
+    padding: 8px 14px;
+    color: $white;
+    cursor: pointer;
+    opacity: 0.9;
+    @include gradient;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        opacity: 0.9;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+    }
+}
+
+.app__tasks__wrapper {
+    padding: 32px;
+    overflow-y: scroll;
+    height: calc(80vh - 190px);
+    margin-bottom: 32px;
+
+}
+
+.app__tasks__message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: $gray;
+}
+
+.app__tasks {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app__tasks__item {
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $light-gray;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    label {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+        overflow: hidden;
+
+        input:checked+p {
+            text-decoration: line-through;
+        }
+
+        p {
+            flex: 1 1 0%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+}
+
+.app__tasks__item__controls {
+    display: flex;
+    gap: 16px;
+}
+
+.app__tasks__item__control {
+    color: $black;
+
+    &--edit {
+        &:disabled {
+            color: $light-gray;
+            cursor: not-allowed;
+        }
+    }
+
+    &--destructive {
+        color: $red;
+    }
+}
