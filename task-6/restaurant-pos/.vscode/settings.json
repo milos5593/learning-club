@@ -1,0 +1,155 @@
+{
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    // EDITOR
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "editor.lineHeight": 2,
+    "editor.tabSize": 4,
+    "editor.cursorStyle": "block",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.autoSave": "onFocusChange",
+    "editor.detectIndentation": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.accessibilitySupport": "off",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.linkedEditing": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+    },
+    "html.format.wrapAttributes": "force-expand-multiline",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": ["support.class.component.vue"],
+                "settings": {
+                    "foreground": "#edbc04"
+                }
+            }
+        ]
+    },
+    "editor.unicodeHighlight.allowedCharacters": {
+        "’": true,
+        "‘": true
+    },
+    // WORKBENCH
+    "workbench.iconTheme": "vscode-icons",
+    // PRETTIER
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    // ESLINT
+    // "eslint.packageManager": "yarn",
+    // "eslint.validate": ["vue", "typescript", "html", "javascript"],
+    // TERMINAL
+    "terminal.integrated.fontSize": 18,
+    // PER FILETYPE SETTINGS
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[mjml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    // OTHER
+    "volar.autoCompleteRefs": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "headwind.runOnSave": false,
+    "headwind.removeDuplicates": false,
+    "markdown.preview.fontSize": 20,
+    "explorer.openEditors.visible": 0,
+    "emmet.showAbbreviationSuggestions": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "thunder-client.codeSnippetLanguage": "js-axios",
+    "git.suggestSmartCommit": false,
+    "redhat.telemetry.enabled": false,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": false
+    },
+    "sonarlint.rules": {
+        "javascript:S4326": {
+            "level": "off"
+        },
+        "javascript:S1848": {
+            "level": "off"
+        },
+        "Web:ItemTagNotWithinContainerTagCheck": {
+            "level": "off"
+        },
+        "typescript:S6397": {
+            "level": "off"
+        },
+        "typescript:S1788": {
+            "level": "off"
+        },
+        "typescript:S1117": {
+            "level": "off"
+        },
+        "typescript:S1871": {
+            "level": "off"
+        },
+        "typescript:S107": {
+            "level": "off"
+        },
+        "Web:BoldAndItalicTagsCheck": {
+            "level": "off"
+        },
+        "typescript:S878": {
+            "level": "off"
+        },
+        "css:S4649": {
+            "level": "off"
+        }
+    },
+    "git.confirmSync": false,
+    "eslint.alwaysShowStatus": true,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "git.autofetch": true,
+    "thunder-client.indentSize": 4,
+    "editor.largeFileOptimizations": false,
+    "editor.wordWrapColumn": 120,
+    "prettier.printWidth": 120,
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "vue.autoInsert.dotValue": true,
+    "vue.inlayHints.missingProps": true,
+    "vue.inlayHints.inlineHandlerLeading": true,
+    "vue.inlayHints.optionsWrapper": true
+}
