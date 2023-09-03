@@ -24,10 +24,10 @@ const ads = [{
         <div class="cr__ads flex gap-10 text-white mb-10">
         <AppAd v-for="ad in ads" :header="ad.header" :text="ad.text" :cta-label="ad.ctaLabel" :cta-link="ad.ctaLink" :image="ad.image"/>
     </div>
-        <Reservation />        
+        <AppReservation />        
         <div class="cr__cars">
-            <PopularCars />
-            <RecommondationCars />
+            <AppPopCars />
+            <AppRecCars />
         </div>
     </div>
 </template>
