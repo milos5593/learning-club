@@ -16,5 +16,7 @@
     "nuxt": "^3.6.5",
     "nuxt-svgo": "^3.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@formkit/nuxt": "^1.0.0"
+  }
 }
