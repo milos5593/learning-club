@@ -15,9 +15,13 @@
                 </label>
             </div>
             <div class="icons flex gap-5">
-                <button class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200">
+                <!-- <button class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200"> -->
+                    <!-- <svgo-hearth filled class="headerIcon" /> -->
+                <!-- </button> -->
+                <NuxtLink to="/likedCars" class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200">
                     <svgo-hearth filled class="headerIcon" />
-                </button>
+                </NuxtLink>
+
                 <button class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200">
                     <svgo-notification filled class="headerIcon" />
                 </button>

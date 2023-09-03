@@ -15,6 +15,7 @@ interface ICar {
     isAvailable: boolean
     review: number
     liked: boolean
+    numberOfRentalDays: number
 }
 
 interface State {
@@ -29,8 +30,11 @@ export const useCarStore = defineStore("carStore", {
         getAllCars: async (state) => {
             return state.cars
         },
-        popularCars: async (state) => {
-            return state.cars.sort((a, b) => b.review - a.review).slice(0, 4)
+        getPopularCars: async (state) => {
+            return state.cars.sort((a, b) => b.numberOfRentalDays - a.numberOfRentalDays).slice(0, 4)
+        },
+        getRecomCars: async (state) => {
+            return state.cars.sort((a, b) => b.review - a.review).slice(0, 8)
         },
         getCarTypes: async (state) => {
             return  [...new Set(state.cars.map(car => car.typeCar))];

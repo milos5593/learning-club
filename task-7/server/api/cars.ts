@@ -13,7 +13,8 @@ export default defineEventHandler((event) => {
     image: "car-1",
     isAvailable: true,
     review: 4.2,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 42
   },
   {
     id: 2,
@@ -29,7 +30,8 @@ export default defineEventHandler((event) => {
     image: "car-2",
     isAvailable: false,
     review: 3.7,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 77
   },
   {
     id: 3,
@@ -45,7 +47,8 @@ export default defineEventHandler((event) => {
     image: "car-3",
     isAvailable: true,
     review: 4.7,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 25
   },
   {
     id: 4,
@@ -61,7 +64,8 @@ export default defineEventHandler((event) => {
     image: "car-4",
     isAvailable: false,
     review: 3.1,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 43
   },
   {
     id: 5,
@@ -77,7 +81,8 @@ export default defineEventHandler((event) => {
     image: "car-1",
     isAvailable: true,
     review: 4.9,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 45
   },
   {
     id: 6,
@@ -93,7 +98,8 @@ export default defineEventHandler((event) => {
     image: "car-2",
     isAvailable: false,
     review: 3.5,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 66
   },
   {
     id: 7,
@@ -109,7 +115,8 @@ export default defineEventHandler((event) => {
     image: "car-3",
     isAvailable: true,
     review: 4.0,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 14
   },
   {
     id: 8,
@@ -125,7 +132,8 @@ export default defineEventHandler((event) => {
     image: "car-4",
     isAvailable: false,
     review: 3.7,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 43
   },
   {
     id: 9,
@@ -141,7 +149,8 @@ export default defineEventHandler((event) => {
     image: "car-1",
     isAvailable: true,
     review: 4.1,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 25
   },
   {
     id: 10,
@@ -157,7 +166,8 @@ export default defineEventHandler((event) => {
     image: "car-2",
     isAvailable: false,
     review: 3.3,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 22
   },
   {
     id: 11,
@@ -173,7 +183,8 @@ export default defineEventHandler((event) => {
     image: "car-3",
     isAvailable: true,
     review: 4.2,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 17
   },
   {
     id: 12,
@@ -189,7 +200,8 @@ export default defineEventHandler((event) => {
     image: "car-4",
     isAvailable: false,
     review: 3.2,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 110
   },
   {
     id: 13,
@@ -205,7 +217,8 @@ export default defineEventHandler((event) => {
     image: "car-1",
     isAvailable: true,
     review: 4.9,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 1
   },
   {
     id: 14,
@@ -221,7 +234,8 @@ export default defineEventHandler((event) => {
     image: "car-2",
     isAvailable: false,
     review: 3.1,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 14
   },
   {
     id: 15,
@@ -237,7 +251,8 @@ export default defineEventHandler((event) => {
     image: "car-3",
     isAvailable: true,
     review: 4.7,
-    liked: false
+    liked: false,
+    numberOfRentalDays: 151
   },
   {
     id: 16,
@@ -253,6 +268,7 @@ export default defineEventHandler((event) => {
     image: "car-4",
     isAvailable: false,
     review: 3.6,
-    liked: true
+    liked: true,
+    numberOfRentalDays: 12
   }]
 })
