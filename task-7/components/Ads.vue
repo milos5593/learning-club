@@ -3,7 +3,7 @@
         <div class="cr__ad w-1/2 bg-blue-400 p-10 rounded-lg">
             <div class="cr__adText w-1/2">
                 <h2 class="text-3xl leading-normal">The Best Platform for Car Rental</h2>
-                <h4 class="my-5">Ease of doing a car rental safely and reliably. Of course at a low price.</h4>
+                <h3 class="my-5">Ease of doing a car rental safely and reliably. Of course at a low price.</h3>
             </div>
             <NuxtLink to="/cars" class="px-5 py-3 rounded-md bg-blue-700">Rental Car</NuxtLink>
             <img src="@/assets/images/ads/ad-1.png" alt="ad-1" class="m-auto">
