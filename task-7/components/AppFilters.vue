@@ -11,7 +11,7 @@ const maxPrice = await cars.getMaxPrice
 </script>
 
 <template>
-    <div class="cr__filters p-8">
+    <div class="cr__filters p-8 h-full bg-white">
         <div class="cr__type flex flex-col gap-1 mb-9">
             <h4 class="text-gray-400 text-sm">TYPE</h4>
             <div v-for="tf in typeFilters" class="flex gap-2 text-xl mt-3">
