@@ -24,7 +24,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-    <div class="cr__carWrapper flex flex-col p-8 bg-white rounded-lg">
+    <div class="cr__carCard flex flex-col p-8 bg-white rounded-lg">
         <div class="flex justify-between">
             <div class="">
                 <h3 class="font-bold text-xl">{{ props.brand }} {{ props.model }}</h3>
