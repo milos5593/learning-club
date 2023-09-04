@@ -43,9 +43,15 @@ export const useCarStore = defineStore("carStore", {
             return  [...new Set(state.cars.map(car => car.capacity))];
         },
         getLikedCars: async (state) => {
-            console.log(state.cars);
-            
             return state.cars.filter(c => c.liked === true)
+        },
+        getMinPrice: async (state) => {
+            const prices = state.cars.map(c => c.pricePerDay)
+            return Math.min(...prices)
+        },
+        getMaxPrice: async (state) => {
+            const prices = state.cars.map(c => c.pricePerDay)
+            return Math.max(...prices)
         }
     },
     actions: {

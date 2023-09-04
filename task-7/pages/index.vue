@@ -59,7 +59,7 @@ const ads = [{
     </div>
 </template>
 
-<style scoped   >
+<style scoped>
 .svg {
     width: 24px;
     height: 24px;
