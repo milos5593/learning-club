@@ -41,6 +41,11 @@ export const useCarStore = defineStore("carStore", {
         },
         getCapacity: async (state) => {
             return  [...new Set(state.cars.map(car => car.capacity))];
+        },
+        getLikedCars: async (state) => {
+            console.log(state.cars);
+            
+            return state.cars.filter(c => c.liked === true)
         }
     },
     actions: {
