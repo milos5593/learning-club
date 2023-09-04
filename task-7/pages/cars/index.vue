@@ -13,7 +13,7 @@ const allCars = await cars.getAllCars
         <div class="cr__reservation col-span-4 p-8">
             <AppReservation />
             <div class="cr__recommendationCars mt-8 grid gap-8 grid-cols-3">
-                <AppCar v-for="car in allCars" :id="car.id" :brand="car.brand" :model="car.model" :typeCar="car.typeCar"
+                <AppCarCard v-for="car in allCars" :id="car.id" :brand="car.brand" :model="car.model" :typeCar="car.typeCar"
                     :capacity="car.capacity" :steering="car.steering" :gasoline="car.gasoline"
                     :pricePerDay="car.pricePerDay" :oldPricePerDay="car.oldPricePerDay" :description="car.description"
                     :image="car.image" :isAvailable="car.isAvailable" :review="car.review" :liked="car.liked"

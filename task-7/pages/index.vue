@@ -25,8 +25,7 @@ const ads = [{
 <template>
     <div class="mainDiv container mx-auto bg-gray-100 pt-8 pb-16">
         <div class="cr__ads flex gap-10 text-white mb-10">
-            <AppAd v-for="ad in ads" :header="ad.header" :text="ad.text" :cta-label="ad.ctaLabel" :cta-link="ad.ctaLink"
-                :image="ad.image" />
+            <AppAd v-for="ad in ads" :header="ad.header" :text="ad.text" :cta-label="ad.ctaLabel" :cta-link="ad.ctaLink" :image="ad.image" />
         </div>
         <AppReservation />
         <div class="cr__cars">
@@ -35,7 +34,7 @@ const ads = [{
                 <button class="text-blue-700">View All</button>
             </div>
             <div class="cr__recommendationCars mt-8 grid gap-8 grid-cols-4">
-                <AppCar v-for="popCar in popularCars" :id="popCar.id" :brand="popCar.brand" :model="popCar.model"
+                <AppCarCard v-for="popCar in popularCars" :id="popCar.id" :brand="popCar.brand" :model="popCar.model"
                     :typeCar="popCar.typeCar" :capacity="popCar.capacity" :steering="popCar.steering"
                     :gasoline="popCar.gasoline" :pricePerDay="popCar.pricePerDay" :oldPricePerDay="popCar.oldPricePerDay"
                     :description="popCar.description" :image="popCar.image" :isAvailable="popCar.isAvailable"
@@ -46,7 +45,7 @@ const ads = [{
             <h4 class="text-gray-500">Recommendation Car</h4>
         </div>
         <div class="cr__recommendationCars mt-8 grid gap-8 grid-cols-4">
-            <AppCar v-for="recomCar in recomCars" :id="recomCar.id" :brand="recomCar.brand" :model="recomCar.model"
+            <AppCarCard v-for="recomCar in recomCars" :id="recomCar.id" :brand="recomCar.brand" :model="recomCar.model"
                 :typeCar="recomCar.typeCar" :capacity="recomCar.capacity" :steering="recomCar.steering"
                 :gasoline="recomCar.gasoline" :pricePerDay="recomCar.pricePerDay" :oldPricePerDay="recomCar.oldPricePerDay"
                 :description="recomCar.description" :image="recomCar.image" :isAvailable="recomCar.isAvailable"

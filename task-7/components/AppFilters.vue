@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { useCarStore } from '~/store/carStore'
-
 const cars = useCarStore()
 await cars.fetchCars()
 const typeFilters = await cars.getCarTypes
 const capacityFilters = await cars.getCapacity
 const minPrice = await cars.getMinPrice
 const maxPrice = await cars.getMaxPrice
-
 </script>
 
 <template>
