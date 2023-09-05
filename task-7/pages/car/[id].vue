@@ -3,9 +3,8 @@
         <div class="col-span-1">
             <AppFilters />
         </div>
-        <div class="col-span-4">
+        <div class="col-span-4 p-8">
             <AppCarWrapper />
-            <AppReviews />
         </div>
     </div>
 </template>    

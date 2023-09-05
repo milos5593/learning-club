@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="cr__carWrapper col-span-4 p-8 grid grid-cols-2 gap-8 w-full">
+    <div class="cr__carWrapper col-span-4 pb-8 grid grid-cols-2 gap-8 w-full">
         <div class="grid grid-flow-row grid-rows-4 gap-8">
             <div class="row-span-3 flex flex-col bg-blue-700 text-white p-6 rounded-xl">
                 <h3 class="text-3xl">Sports car with the best design and acceleration</h3>
@@ -61,4 +61,48 @@
             </div>
         </div>
     </div>
+    <!-- TODO Need to be separate component, still not finished -->
+    <!-- <div class="cr__carReview p-8 w-full bg-white rounded-xl">
+        <h3 class="mb-8 font-semibold text-lg">Reviews<span class="ml-2 px-3 py-1 rounded-md text-white bg-blue-500">13</span></h3>
+        <div class="grid gap-6">
+            <div class="col-span-1 grid grid-flow-col">
+                <div class="pr-4">
+                    <img src="/images/other/profil.png" alt="profile image">
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h5 class="font-bold text-lg mb-2">Alex Stanton</h5>
+                            <p class="text-gray-500">CEO at Bukalapak</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <h5 class="text-gray-500">21 July 2022</h5>
+                            <p>zvezdice</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-500">We are very happy with the service from the MORENT App. Morent has a low price and also a large
+                        variety of cars with good and comfortable facilities. In addition, the service provided by the
+                        officers is also very friendly and very polite.</p>
+                </div>
+            </div>
+            <div class="col-span-1 grid grid-flow-col">
+                <div class="pr-4">
+                    <img src="/images/other/profil.png" alt="profile image">
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <h5 class="font-bold text-lg mb-2">Skylar Dias</h5>
+                            <p class="text-gray-500">CEO at Amazon</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <h5 class="text-gray-500">20 July 2022</h5>
+                            <p>zvezdice</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-500">We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
+                </div>
+            </div> 
+        </div>
+    </div>-->
 </template>

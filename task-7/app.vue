@@ -23,4 +23,9 @@ useHead({
 .nuxt-icon {
   margin-bottom: 0;
 }
+
+.svg {
+    width: 24px;
+    height: 24px;
+}
 </style>
