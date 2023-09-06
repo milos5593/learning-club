@@ -4,8 +4,8 @@ export default defineNuxtConfig({
     strict: true,
     shim: false
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-svgo', 
-  ['@pinia/nuxt',
+  modules: [ '@formkit/nuxt','@nuxtjs/tailwindcss','nuxt-svgo', 
+  ['@pinia/nuxt', 
     {
       autoImports: ['defineStore']
     }]
@@ -16,3 +16,4 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   devtools: { enabled: false }
 })
+import { createProPlugin, inputs } from '@formkit/pro'
