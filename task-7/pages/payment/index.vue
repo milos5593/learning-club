@@ -33,25 +33,25 @@
                     <p class="text-gray-500 text-sm">Please select your rental date</p>
                     <p class="text-gray-500 text-sm">Step 2 of 4</p>
                 </div>
-                <FormKit type="checkbox" label="Pick Up" name="pickup" />
+                <FormKit type="checkbox" label="Pick Up" name="pickup" validation="required" />
                 <div class="flex">
                   <div class="w-full">  
                     <FormKit type="select" label="Locations" name="pick-locations" placeholder="Select your city" validation="required" :options="['Beograd', 'Zemun', 'Novi Sad', 'Nova Pazova']"/>
-                    <FormKit type="date" name="pick-date" label="Date" />
+                    <FormKit type="date" name="pick-date" label="Date" validation="required"/>
                   </div> 
                   <div class="w-full">
-                    <FormKit type="time" label="Time" name="time" value="10:00"/>
+                    <FormKit type="time" label="Time" name="time" value="10:00" validation="required"/>
                   </div>  
                     
                 </div>
-                <FormKit type="checkbox" label="Drop-Off" name="drop-off" />
+                <FormKit type="checkbox" label="Drop-Off" name="drop-off" validation="required"/>
                 <div class="flex">
                   <div class="w-full">  
                     <FormKit type="select" label="Locations" name="drop-locations" placeholder="Select your city" validation="required" :options="['Beograd', 'Zemun', 'Novi Sad', 'Nova Pazova']"/>
-                    <FormKit type="date" name="drop-date" label="Date" />
+                    <FormKit type="date" name="drop-date" label="Date" validation="required"/>
                   </div> 
                   <div class="w-full">
-                    <FormKit type="time" label="Time" name="drop=time" value="10:00"/>
+                    <FormKit type="time" label="Time" name="drop=time" value="10:00" validation="required"/>
                   </div>  
                     
                 </div>
@@ -112,9 +112,11 @@
         </div>
         
         
-        <div class="col-span-1  bg-white rounded-2xl mb-20 ml-10 ">
-            <h3 class="text-l font-bold">Rental Summary</h3>
-            <p class="text-gray-500 text-sm">Prices may change depending on the lenght of the rental and the price of your rental car</p>
+        <div class="col-span-1">
+            <div class=" bg-white rounded-2xl ml-5 p-5">
+            <h3 class="text-xl font-bold">Rental Summary</h3>
+            <p class="text-gray-500 text-sm ">Prices may change depending on the lenght of the rental and the price of your rental car</p>
+            </div>
         </div>
     
     </div>
