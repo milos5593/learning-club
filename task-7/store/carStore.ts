@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-interface ICar {
+export interface ICar {
     id: number
     brand: string
     model: string
@@ -9,20 +9,27 @@ interface ICar {
     steering: string
     gasoline: number
     pricePerDay: number
-    oldPricePerDay?: number
     description: string
     image: string
     isAvailable: boolean
-    review: number
     liked: boolean
-    numberOfRentalDays: number
+    reviews: Array<IReview>
+}
+
+interface IReview {
+    name: string,
+    position: string,
+    description: string,
+    date: Date,
+    rate: number
 }
 
 interface State {
     cars: ICar[]
 }
 
-export const useCarStore = defineStore("carStore", {
+export const useCarStore = defineStore({
+    id: 'carStore',
     state: (): State => ({
         cars: [],
     }),
@@ -31,19 +38,13 @@ export const useCarStore = defineStore("carStore", {
             return state.cars
         },
         getPopularCars: async (state) => {
-            return state.cars.sort((a, b) => b.numberOfRentalDays - a.numberOfRentalDays).slice(0, 4)
+            return state.cars.sort((a, b) => b.reviews.length - a.reviews.length).slice(0, 4)
         },
         getRecomCars: async (state) => {
-            return state.cars.sort((a, b) => b.review - a.review).slice(0, 8)
+            return state.cars.slice(0, 8)
         },
-        getCarTypes: async (state) => {
-            return  [...new Set(state.cars.map(car => car.typeCar))];
-        },
-        getCapacity: async (state) => {
-            return  [...new Set(state.cars.map(car => car.capacity))];
-        },
-        getLikedCars: async (state) => {
-            return state.cars.filter(c => c.liked === true)
+        getLikedCars: (state) => {
+            return state.cars.filter(c => c.liked)
         },
         getMinPrice: async (state) => {
             const prices = state.cars.map(c => c.pricePerDay)
@@ -52,6 +53,15 @@ export const useCarStore = defineStore("carStore", {
         getMaxPrice: async (state) => {
             const prices = state.cars.map(c => c.pricePerDay)
             return Math.max(...prices)
+        },
+        getCarTypes: async (state) => {
+            return [...new Set(state.cars.map(car => car.typeCar))];
+        },
+        getCapacity: async (state) => {
+            return [...new Set(state.cars.map(car => car.capacity))];
+        },
+        totalCars: (state) => {
+            return state.cars.length
         }
     },
     actions: {
@@ -68,9 +78,14 @@ export const useCarStore = defineStore("carStore", {
                 this.cars = data.value
             }
         },
+        // async fetchCarById(id: number) {
+        //     const { data, error } = await useFetch<ICar[]>(`/api/cars/${id}}`, {
+        //         lazy: true
+        //     });
+        // },
         likeCar(id: number) {
             const clickedCar = this.cars.find((c) => c.id === id) as ICar;
             clickedCar.liked = !clickedCar.liked;
-          }
+        },
     }
 })
