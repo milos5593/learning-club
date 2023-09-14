@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { storeToRefs } from 'pinia';
 import { useCarStore } from '~/store/carStore'
+import { storeToRefs } from 'pinia';
 const carStore = useCarStore()
 storeToRefs(carStore)
 const route = useRoute()

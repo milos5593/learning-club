@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
 import { useAdStore } from '~/store/adStore'
 

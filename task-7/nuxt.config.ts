@@ -4,11 +4,11 @@ export default defineNuxtConfig({
     strict: true,
     shim: false
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-svgo', 
-  ['@pinia/nuxt',
-    {
-      autoImports: ['defineStore']
-    }]
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-svgo', '@formkit/nuxt',
+    ['@pinia/nuxt',
+      {
+        autoImports: ['defineStore']
+      }]
   ],
   svgo: {
     autoImportPath: '~/assets/icons/'

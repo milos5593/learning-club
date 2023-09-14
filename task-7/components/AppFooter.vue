@@ -47,10 +47,6 @@
     </div>
 </template>
 
-<script lang="ts">
-
-</script>
-
 <style scoped>
 .svg {
     width: fit-content;
