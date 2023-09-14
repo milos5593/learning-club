@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-const { ad } = defineProps({
-    ad: {
-        type: Object,
-        required: true,
-    },
-})
+const props = defineProps(['ad'])
 </script>
 
 <template>

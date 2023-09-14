@@ -9,6 +9,7 @@ export interface ICar {
     steering: string
     gasoline: number
     pricePerDay: number
+    discount: number
     description: string
     image: string
     isAvailable: boolean
@@ -20,7 +21,7 @@ interface IReview {
     name: string,
     position: string,
     description: string,
-    date: Date,
+    date: string,
     rate: number
 }
 
@@ -62,7 +63,7 @@ export const useCarStore = defineStore({
         },
         totalCars: (state) => {
             return state.cars.length
-        }
+        },
     },
     actions: {
         async fetchCars() {
@@ -78,14 +79,13 @@ export const useCarStore = defineStore({
                 this.cars = data.value
             }
         },
-        // async fetchCarById(id: number) {
-        //     const { data, error } = await useFetch<ICar[]>(`/api/cars/${id}}`, {
-        //         lazy: true
-        //     });
-        // },
         likeCar(id: number) {
             const clickedCar = this.cars.find((c) => c.id === id) as ICar;
             clickedCar.liked = !clickedCar.liked;
         },
+        searchCars(searchBy: string) {
+            // this.cars.filter()
+            console.log(searchBy);
+        }
     }
 })

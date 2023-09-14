@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useCarStore } from '~/store/carStore'
+const carStore = useCarStore()
+const carID = useRoute().params.id;
 
 </script>
 
@@ -61,9 +64,9 @@
             </div>
         </div>
     </div>
-    <!-- TODO Need to be separate component, still not finished -->
-    <!-- <div class="cr__carReview p-8 w-full bg-white rounded-xl">
-        <h3 class="mb-8 font-semibold text-lg">Reviews<span class="ml-2 px-3 py-1 rounded-md text-white bg-blue-500">13</span></h3>
+    <div class="cr__carReview p-8 w-full bg-white rounded-xl">
+        <h3 class="mb-8 font-semibold text-lg">Reviews<span
+                class="ml-2 px-3 py-1 rounded-md text-white bg-blue-500">13</span></h3>
         <div class="grid gap-6">
             <div class="col-span-1 grid grid-flow-col">
                 <div class="pr-4">
@@ -80,7 +83,8 @@
                             <p>zvezdice</p>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-500">We are very happy with the service from the MORENT App. Morent has a low price and also a large
+                    <p class="mt-4 text-gray-500">We are very happy with the service from the MORENT App. Morent has a low
+                        price and also a large
                         variety of cars with good and comfortable facilities. In addition, the service provided by the
                         officers is also very friendly and very polite.</p>
                 </div>
@@ -100,9 +104,11 @@
                             <p>zvezdice</p>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-500">We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
+                    <p class="mt-4 text-gray-500">We are greatly helped by the services of the MORENT Application. Morent
+                        has low prices and also a wide variety of cars with good and comfortable facilities. In addition,
+                        the service provided by the officers is also very friendly and very polite.</p>
                 </div>
-            </div> 
+            </div>
         </div>
-    </div>-->
+    </div>
 </template>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
-const cars = useCarStore()
+const carStore = useCarStore()
 
 // interface Props {
 //     id: number
@@ -36,8 +36,8 @@ const props = defineProps(['car'])
                 <h3 class="font-bold text-xl">{{ car.brand }} {{ car.model }}</h3>
                 <h5 class="font-bold text-sm text-gray-500">{{ car.typeCar }}</h5>
             </div>
-            <svgo-like v-if="car.liked" filled class="svg" @click="cars.likeCar(car.id)" />
-            <svgo-noLike v-else filled class="svg" @click="cars.likeCar(car.id)" />
+            <svgo-like v-if="car.liked" filled class="svg" @click="carStore.likeCar(car.id)" />
+            <svgo-noLike v-else filled class="svg" @click="carStore.likeCar(car.id)" />
         </div>
         <div class="">
             <img :src="(`/images/cars/${car.image}.png`)" class="my-14 mx-auto" />
@@ -69,8 +69,8 @@ const props = defineProps(['car'])
                 </p>
             </div>
             <div class="flex flex-1 w-full">
-                <NuxtLink :to="`/car/${car.id}`" class="text-white text-center bg-blue-700 py-3 w-full rounded-md">Rent
-                    Now
+                <NuxtLink :to="`/car/${car.id}`" class="text-white text-center bg-blue-700 py-3 w-full rounded-md">
+                    Rent Now
                 </NuxtLink>
             </div>
         </div>
