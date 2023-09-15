@@ -3,7 +3,7 @@
         <div class="footer container mx-auto py-14">
             <div class="footer__top flex justify-between">
                 <div class="footer__logo flex flex-col gap-8">
-                    <svgo-logo class="svg flex" filled />
+                    <SVGLogo />
                     <p class="text-gray-500 w-2/3">Our vision is to provide convenience and help increase your sales
                         business.</p>
                 </div>
@@ -46,9 +46,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-.svg {
-    width: fit-content;
-}
-</style>

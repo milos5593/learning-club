@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
+import { HeartIcon } from '@heroicons/vue/24/outline'
 const carStore = useCarStore()
 const carID = useRoute().params.id;
 
@@ -31,8 +32,7 @@ const carID = useRoute().params.id;
                     <h3 class="font-bold text-xl">Nissan GT-R</h3>
                     <h4>zvezdice</h4>
                 </div>
-                <svgo-like filled class="svg" />
-                <!-- @click="cars.likeCar(props.id)" /> -->
+                <HeartIcon class="w-6" />
             </div>
             <p class="text-gray-700 text-xl leading-10">NISMO has become the embodiment of Nissan's outstanding performance,
                 inspired by the most unforgiving proving ground, the "race track".</p>

@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
 import { storeToRefs } from 'pinia';
-// import {  } from '@heroicons/vue/24/solid'
+import { HeartIcon, BellIcon, Cog6ToothIcon } from '@heroicons/vue/24/solid'
+// import { FormKit } from "@formkit/vue";
 const carStore = useCarStore()
 storeToRefs(carStore)
 const route = useRoute()
@@ -16,57 +17,33 @@ watch(() => searchInput.value, async () => {
 <template>
     <div class="bg-white border border-gray">
         <div class="container mx-auto flex justify-between py-10">
-            <div class="flex items-center">
+            <!-- <div class="flex items-center"> -->
+            <div class="flex">
                 <a href="/">
-                    <svgo-logo class="svg mr-20" filled />
+                    <SVGLogo class="mr-20" />
                 </a>
-                <label class="relative">
-                    <svgo-search filled
-                        class="svg pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3 cursor-pointer" />
-                    <input type="text" name="search" id="search" placeholder="Search something here"
-                        class="form-input border border-gray-300 py-3 px-4 rounded-full placeholder-gray-500 text-gray-500 appearance-none w-full block pl-14 focus:outline-none"
-                        v-model="searchInput">
-                    <svgo-filter filled
-                        class="svg pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 right-3 cursor-pointer" />
-                </label>
+                <FormKit type="search" prefix-icon="search" suffix-icon="settings" placeholder="Search something here"
+                    maxlength=20 v-model="searchInput">
+                </FormKit>
             </div>
             <div class="icons flex gap-5">
-                <!-- <button class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200"> -->
-                <!-- <svgo-hearth filled class="headerIcon" /> -->
-                <!-- </button> -->
                 <NuxtLink to="/likedCars"
                     class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200">
-                    <svgo-hearth filled class="headerIcon" />
+                    <HeartIcon class="w-6" />
                 </NuxtLink>
 
                 <button
                     class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200">
-                    <svgo-notification filled class="headerIcon" />
+                    <BellIcon class="w-6" />
                 </button>
                 <button
                     class="p-3 border border-solid border-gray-300 rounded-full hover:border-gray-500 ease-in duration-200">
-                    <svgo-settings filled class="headerIcon" />
+                    <Cog6ToothIcon class="w-6" />
                 </button>
                 <button>
-                    <svgo-profileImage filled class="profileImage" />
+                    <img src="/images/other/profil.png">
                 </button>
             </div>
         </div>
     </div>
 </template>
-
-<style scoped>
-.svg {
-    width: fit-content;
-}
-
-.headerIcon {
-    width: 24px;
-    height: 24px;
-}
-
-.profileImage {
-    width: 44px;
-    height: 44px;
-}
-</style>

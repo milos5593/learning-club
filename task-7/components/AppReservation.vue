@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import { ArrowsUpDownIcon } from '@heroicons/vue/24/outline'
+</script>
+
 <template>
     <div class="cr__reservation flex gap-10 items-center">
         <div class="cr__pickUp bg-white py-5 px-10 flex flex-col flex-1 gap-4 rounded-lg">
@@ -30,7 +34,7 @@
             </div>
         </div>
         <div class="cr__switch bg-blue-700 flex justify-center items-center rounded-lg w-14 h-14">
-            <svgo-switch filled class="svg" />
+            <ArrowsUpDownIcon class="w-6 text-white" />
         </div>
         <div class="cr__dropOff bg-white py-5 px-10 flex flex-col flex-1 gap-4 rounded-lg">
             <div class="cr__dropDownRadio">
@@ -63,9 +67,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-.svg {
-    width: fit-content;
-}
-</style>
