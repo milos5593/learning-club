@@ -17,6 +17,7 @@
     "nuxt-svgo": "^3.4.0"
   },
   "dependencies": {
-    "@formkit/nuxt": "^1.0.0"
+    "@formkit/nuxt": "^1.0.0",
+    "@heroicons/vue": "^2.0.18"
   }
 }

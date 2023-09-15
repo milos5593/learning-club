@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
 import { storeToRefs } from 'pinia';
+// import {  } from '@heroicons/vue/24/solid'
 const carStore = useCarStore()
 storeToRefs(carStore)
 const route = useRoute()
