@@ -13,8 +13,12 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.11",
     "@types/node": "^18.17.1",
-    "nuxt": "^3.6.5",
-    "nuxt-svgo": "^3.4.0"
+    "nuxt": "^3.6.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@formkit/icons": "^1.0.0",
+    "@formkit/nuxt": "^1.0.0",
+    "@formkit/themes": "^1.0.0",
+    "@heroicons/vue": "^2.0.18"
+  }
 }

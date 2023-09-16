@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import { ArrowsUpDownIcon } from '@heroicons/vue/24/outline'
+</script>
+
 <template>
     <div class="cr__reservation flex gap-10 items-center">
         <div class="cr__pickUp bg-white py-5 px-10 flex flex-col flex-1 gap-4 rounded-lg">
@@ -14,15 +18,15 @@
                     </select>
                 </div>
                 <div class="cr__pickUpDate w-full ml-4 border-r">
-                    <label for="date" class="font-bold">Date</label><br>
-                    <select name="date" id="date" class="text-xs bg-white text-gray-500">
+                    <label for="pickUpDate" class="font-bold">Date</label><br>
+                    <select name="date" id="pickUpDate" class="text-xs bg-white text-gray-500">
                         <option value="" disabled selected>Select your date</option>
                         <option value="value">Value</option>
                     </select>
                 </div>
                 <div class="cr__pickUpTime w-full ml-4">
-                    <label for="time" class="font-bold">Time</label><br>
-                    <select name="time" id="time" class="text-xs bg-white text-gray-500">
+                    <label for="pickUpTime" class="font-bold">Time</label><br>
+                    <select name="time" id="pickUpTime" class="text-xs bg-white text-gray-500">
                         <option value="" class="" disabled selected>Select your time</option>
                         <option value="value">Value</option>
                     </select>
@@ -30,7 +34,7 @@
             </div>
         </div>
         <div class="cr__switch bg-blue-700 flex justify-center items-center rounded-lg w-14 h-14">
-            <svgo-switch filled class="svg" />
+            <ArrowsUpDownIcon class="w-6 text-white" />
         </div>
         <div class="cr__dropOff bg-white py-5 px-10 flex flex-col flex-1 gap-4 rounded-lg">
             <div class="cr__dropDownRadio">
@@ -46,15 +50,15 @@
                     </select>
                 </div>
                 <div class="cr__dropDownDate w-full ml-4 border-r">
-                    <label for="date" class="font-bold">Date</label><br>
-                    <select name="date" id="date" class="text-xs bg-white text-gray-500">
+                    <label for="dropDownDate" class="font-bold">Date</label><br>
+                    <select name="date" id="dropDownDate" class="text-xs bg-white text-gray-500">
                         <option value="" disabled selected>Select your date</option>
                         <option value="value">Value</option>
                     </select>
                 </div>
                 <div class="cr__dropDownTime w-full ml-4">
-                    <label for="time" class="font-bold">Time</label><br>
-                    <select name="time" id="time" class="text-xs bg-white text-gray-500">
+                    <label for="dropDownTime" class="font-bold">Time</label><br>
+                    <select name="time" id="dropDownTime" class="text-xs bg-white text-gray-500">
                         <option value="" class="" disabled selected>Select your time</option>
                         <option value="value">Value</option>
                     </select>
@@ -63,9 +67,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-.svg {
-    width: fit-content;
-}
-</style>

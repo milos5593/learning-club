@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { createPinia } from 'pinia'
 createPinia()
 
@@ -18,9 +18,3 @@ useHead({
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<style>
-.nuxt-icon {
-  margin-bottom: 0;
-}
-</style>

@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-100 h-auto">
-        <layoutsHeader />
+        <AppHeader />
         <slot />
-        <layoutsFooter />
+        <AppFooter />
     </div>
 </template>

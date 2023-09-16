@@ -8,12 +8,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 90,
     pricePerDay: 99,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-1",
     isAvailable: true,
-    review: 4.2,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 2,
@@ -24,12 +39,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 96.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-2",
     isAvailable: false,
-    review: 3.7,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 3,
@@ -40,12 +70,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80,
-    oldPricePerDay: 100,
+    discount: 10,
     description: "",
     image: "car-3",
     isAvailable: true,
-    review: 4.7,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 4,
@@ -56,12 +101,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 72.00,
-    oldPricePerDay: 90,
+    discount: 10,
     description: "",
     image: "car-4",
     isAvailable: false,
-    review: 3.1,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 5,
@@ -72,12 +132,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-1",
     isAvailable: true,
-    review: 4.9,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 6,
@@ -88,12 +163,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-2",
     isAvailable: false,
-    review: 3.5,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 7,
@@ -104,12 +194,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-3",
     isAvailable: true,
-    review: 4.0,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 8,
@@ -120,12 +225,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-4",
     isAvailable: false,
-    review: 3.7,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 9,
@@ -136,12 +256,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-1",
     isAvailable: true,
-    review: 4.1,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 10,
@@ -152,12 +287,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-2",
     isAvailable: false,
-    review: 3.3,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 11,
@@ -168,12 +318,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-3",
     isAvailable: true,
-    review: 4.2,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 12,
@@ -184,12 +349,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-4",
     isAvailable: false,
-    review: 3.2,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 13,
@@ -200,12 +380,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-1",
     isAvailable: true,
-    review: 4.9,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 14,
@@ -216,12 +411,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-2",
     isAvailable: false,
-    review: 3.1,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 15,
@@ -232,12 +442,27 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-3",
     isAvailable: true,
-    review: 4.7,
-    liked: false
+    liked: false,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   },
   {
     id: 16,
@@ -248,11 +473,26 @@ export default defineEventHandler((event) => {
     steering: "Manual",
     gasoline: 70,
     pricePerDay: 80.00,
-    oldPricePerDay: 0,
+    discount: 10,
     description: "",
     image: "car-4",
     isAvailable: false,
-    review: 3.6,
-    liked: true
+    liked: true,
+    reviews: [
+      {
+        name: "Alex Stanton",
+        position: "CEO at Bukalapak",
+        description: "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-04-23T18:25:43.511Z",
+        rate: 4
+      },
+      {
+        name: "Skylar Dias",
+        position: "CEO at Amazon",
+        description: "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+        date: "2012-07-23T18:25:43.511Z",
+        rate: 5
+      }
+    ]
   }]
 })
