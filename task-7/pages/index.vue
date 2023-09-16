@@ -35,9 +35,6 @@ const recomCars = await carStore.getRecomCars
         <div class="cr__recommendationCars mt-8 grid gap-8 grid-cols-4">
             <AppCarCard v-for="recomCar in recomCars" :car="recomCar" />
         </div>
-        <div class="cr__showMore flex justify-center mt-16 relative">
-            <button class="text-white bg-blue-700 py-3 px-5 rounded-md">Show more car</button>
-            <p class="absolute right-0 top-3 text-gray-500">{{ carStore.totalCars }} Cars</p>
-        </div>
+        <AppShowMore :length="carStore.totalCars" />
     </div>
 </template>

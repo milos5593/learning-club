@@ -2,15 +2,14 @@
 import { useCarStore } from '~/store/carStore'
 import { storeToRefs } from 'pinia';
 import { HeartIcon, BellIcon, Cog6ToothIcon } from '@heroicons/vue/24/solid'
-// import { FormKit } from "@formkit/vue";
+
 const carStore = useCarStore()
 storeToRefs(carStore)
-const route = useRoute()
+
 const searchInput = ref('')
 
 watch(() => searchInput.value, async () => {
-    const searchBy = searchInput.value
-    await carStore.searchCars(searchBy)
+    carStore.searchCars(searchInput.value)
 })
 </script>
 
@@ -22,7 +21,7 @@ watch(() => searchInput.value, async () => {
                     <SVGLogo />
                 </NuxtLink>
                 <FormKit type="search" prefix-icon="search" suffix-icon="settings" placeholder="Search something here"
-                    maxlength=20 v-model="searchInput">
+                    maxlength="20" v-model="searchInput">
                 </FormKit>
             </div>
             <div class="icons flex gap-5 h-11">

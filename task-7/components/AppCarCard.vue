@@ -1,32 +1,8 @@
 <script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
 import { HeartIcon } from '@heroicons/vue/24/outline'
+
 const carStore = useCarStore()
-
-// interface Props {
-//     id: number
-//     brand: string
-//     model: string
-//     typeCar: string
-//     capacity: number
-//     steering: string
-//     gasoline: number
-//     pricePerDay: number
-//     description: string
-//     image: string
-//     isAvailable: boolean
-//     liked: boolean
-//     reviews: Array<IReview>
-// }
-
-// interface IReview {
-//     name: string,
-//     position: string,
-//     description: string,
-//     date: Date,
-//     rate: number
-// }
-
 const props = defineProps(['car'])
 </script>
 

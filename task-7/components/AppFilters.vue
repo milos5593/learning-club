@@ -1,38 +1,61 @@
 <script lang="ts" setup>
 import { useCarStore } from '~/store/carStore'
+
 const carStore = useCarStore()
-await carStore.fetchCars()
-const typeFilters = await carStore.getCarTypes
-const capacityFilters = await carStore.getCapacity
-const minPrice = await carStore.getMinPrice
-const maxPrice = await carStore.getMaxPrice
+
+// Fetch of filters
+const availableCarTypes = await carStore.getCarTypes
+const availableCapacity = await carStore.getCapacity
+const minPossiblePrice = await carStore.getMinPrice
+const maxPossiblePrice = await carStore.getMaxPrice
+
+// Filter elements
+const typeFilter = ref([])
+const capacityFilter = ref([])
+const minPrice = ref(minPossiblePrice.toString())
+const maxPrice = ref(maxPossiblePrice.toString())
+
+type IFilters = {
+    searchInput: string
+    typeCar: string[]
+    capacity: number[]
+    minPrice: number
+    maxPrice: number
+}
+
+const filters: IFilters = {
+    searchInput: '',
+    typeCar: [],
+    capacity: [],
+    minPrice: 0,
+    maxPrice: 100
+}
+
+watch(() => [typeFilter.value, capacityFilter.value, minPrice.value, maxPrice.value], async () => {
+    filters.typeCar = typeFilter.value
+    filters.capacity = capacityFilter.value
+    filters.minPrice = Number(minPrice.value)
+    filters.maxPrice = Number(maxPrice.value)
+    carStore.filterCars(filters)
+})
 </script>
 
 <template>
-    <div class="cr__filters p-8 h-full bg-white">
-        <div class="cr__type flex flex-col gap-1 mb-9">
-            <h4 class="text-gray-400 text-sm">TYPE</h4>
-            <div v-for="tf in typeFilters" class="flex gap-2 text-xl mt-3">
-                <input type="checkbox" id="carType" name="carType" class="mr-3" />
-                <label for="carType">{{ tf }}</label>
+    <div class="cr__filters col-span-1">
+        <div class="cr__filters p-8 h-full bg-white">
+            <div class="cr__type flex flex-col gap-1 mb-9">
+                <FormKit v-model="typeFilter" type="checkbox" label="TYPE" :options="availableCarTypes" />
             </div>
-        </div>
-        <div class="cr__capacity flex flex-col gap-1 mb-9">
-            <h4 class="text-gray-400 text-sm">CAPACITY</h4>
-            <div v-for="cf in capacityFilters" class="flex gap-2 text-xl mt-3">
-                <input type="checkbox" id="carType" name="carType" class="mr-3" />
-                <label for="carType">{{ cf }}</label>
+            <div class="cr__capacity flex flex-col gap-1 mb-9">
+                <FormKit v-model="capacityFilter" type="checkbox" label="CAPACITY" :options="availableCapacity" />
             </div>
-        </div>
-        <div class="cr__price">
-            <h4 class="text-gray-400 text-sm">PRICE</h4>
-            <div class="priceSlider">
-                <input id="default-range" type="range" value="50"
-                    class="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer dark:bg-blue-700">
-                <div class="flex justify-between">
-                    <label for="default-range">Min. ${{ minPrice }}</label>
-                    <label for="default-range">Max. ${{ maxPrice }}</label>
-                </div>
+            <div class="cr__price">
+                <FormKit v-model="minPrice" type="range" :min="minPossiblePrice" :max="maxPrice" label="Minimum price">
+                </FormKit>
+                <pre wrap>{{ minPrice }}</pre>
+                <FormKit v-model="maxPrice" type="range" :min="minPrice" :max="maxPossiblePrice" label="Maximum price">
+                </FormKit>
+                <pre wrap>{{ maxPrice }}</pre>
             </div>
         </div>
     </div>

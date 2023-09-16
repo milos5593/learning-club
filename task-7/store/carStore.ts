@@ -25,19 +25,38 @@ interface IReview {
     rate: number
 }
 
+interface IFilters {
+    typeCar: string[]
+    capacity: number[]
+    minPrice: number
+    maxPrice: number
+}
+
 interface State {
     cars: ICar[]
+    filters: IFilters
+    searchInput: string
+    filteredCars: ICar[]
 }
 
 export const useCarStore = defineStore({
     id: 'carStore',
     state: (): State => ({
         cars: [],
+        filters: {
+            typeCar: [],
+            capacity: [],
+            minPrice: 0,
+            maxPrice: 100
+        },
+        searchInput: '',
+        filteredCars: []
     }),
     getters: {
         getAllCars: async (state) => {
             return state.cars
         },
+        // CARS
         getPopularCars: async (state) => {
             return state.cars.sort((a, b) => b.reviews.length - a.reviews.length).slice(0, 4)
         },
@@ -64,6 +83,12 @@ export const useCarStore = defineStore({
         totalCars: (state) => {
             return state.cars.length
         },
+
+        // Filtered cars
+        getFilteredCars: (state) => {
+            state.filteredCars = state.cars
+            return state.filteredCars
+        },
     },
     actions: {
         async fetchCars() {
@@ -83,9 +108,34 @@ export const useCarStore = defineStore({
             const clickedCar = this.cars.find((c) => c.id === id) as ICar;
             clickedCar.liked = !clickedCar.liked;
         },
-        searchCars(searchBy: string) {
-            // this.cars.filter()
-            console.log(searchBy);
+        searchCars(search: string) {
+            this.searchInput = search.toLowerCase()
+            this.filterCars(this.filters)
+        },
+        filterCars(filters: IFilters) {
+            const { typeCar, capacity, minPrice, maxPrice } = filters;
+            this.filters = filters
+            this.filteredCars = this.cars
+
+            if (this.searchInput.length) {
+                this.filteredCars = this.filteredCars.filter(car => car.brand.toLowerCase().includes(this.searchInput.toLowerCase()));
+            }
+
+            if (typeCar.length) {
+                this.filteredCars = this.filteredCars.filter((car) => Array.from(typeCar).includes(car.typeCar));
+            }
+
+            if (capacity.length) {
+                this.filteredCars = this.filteredCars.filter((car) => Array.from(capacity.toString()).includes(car.capacity.toString()));
+            }
+
+            if (minPrice) {
+                this.filteredCars = this.filteredCars.filter((car) => car.pricePerDay >= minPrice)
+            }
+
+            if (maxPrice) {
+                this.filteredCars = this.filteredCars.filter((car) => car.pricePerDay <= maxPrice)
+            }
         }
     }
 })
